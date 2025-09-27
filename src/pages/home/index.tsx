@@ -14,7 +14,8 @@ function Home() {
   const [error, setError] = useState<string | null>(null)
 
   const loadNotes = async () => {
-    try {''
+    try {
+      ;('')
       setError(null)
       const data = await getNotes(setIsLoading)
       setNotes(data)
