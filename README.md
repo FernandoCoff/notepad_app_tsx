@@ -18,7 +18,7 @@ Antes de começar, certifique-se de que você tem os seguintes softwares instala
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/FernandoCoff/notepad_app_tsx.git](https://github.com/FernandoCoff/notepad_app_tsx.git)
+    git clone https://github.com/FernandoCoff/notepad_app_tsx.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -39,7 +39,17 @@ Antes de começar, certifique-se de que você tem os seguintes softwares instala
 4.  **Configuração da API (Opcional):**
     Este projeto se conectará por padrão à API no endereço `http://localhost:3333`. Se a sua API estiver rodando em um endereço diferente, siga as instruções na seção **Variáveis de Ambiente**.
 
-5.  **Inicie o servidor de desenvolvimento:**
+5. **formate o código**
+   * Usando NPM:
+        ```bash
+        npm run format
+        ```
+    * Ou usando Yarn:
+        ```bash
+        yarn format
+        ```
+
+7.  **Inicie o servidor de desenvolvimento:**
     * Usando NPM:
         ```bash
         npm start
@@ -49,7 +59,7 @@ Antes de começar, certifique-se de que você tem os seguintes softwares instala
         yarn start
         ```
 
-6.  Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) (ou a porta que for indicada no seu terminal) para ver a aplicação.
+8.  Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) (ou a porta que for indicada no seu terminal) para ver a aplicação.
 
 ---
 
