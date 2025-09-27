@@ -1,41 +1,25 @@
-import { useState } from 'react'
 import * as S from './style'
-import Modal from '../../modal'
 
 interface NoteProps {
   id: string
   title: string
   content: string
+  onEdit: () => void
+  onDelete: () => void
 }
 
-const Note = ({ title, content, id }: NoteProps) => {
-  const [openModal, setOpenModal] = useState<string | null>(null)
-
+const Note = ({ title, content, onEdit, onDelete }: NoteProps) => {
   return (
     <S.Note>
       <h3>{title}</h3>
       <p>{content}</p>
       <S.ButtonsContainer>
-        <S.Button $variant="edit" onClick={() => setOpenModal('editNote')}>
+        <S.Button $variant="edit" onClick={onEdit}>
           Editar
         </S.Button>
-        {openModal === 'editNote' && (
-          <Modal
-            action="edit"
-            title="Editar Nota"
-            onClose={() => setOpenModal(null)}
-          />
-        )}
-        <S.Button $variant="delete" onClick={() => setOpenModal('deleteNote')}>
+        <S.Button $variant="delete" onClick={onDelete}>
           Deletar
         </S.Button>
-        {openModal === 'deleteNote' && (
-          <Modal
-            action="delete"
-            title="Deletar Nota"
-            onClose={() => setOpenModal(null)}
-          />
-        )}
       </S.ButtonsContainer>
     </S.Note>
   )

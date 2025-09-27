@@ -15,6 +15,9 @@ export const Container = styled.div`
   max-height: 80dvh;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background-color: ${colors.white};
 
   @media (max-width: 767px) {
@@ -37,8 +40,14 @@ export const Header = styled.header`
   }
 `
 export const NoteList = styled.ul`
+  flex: 1;
   list-style: none;
   padding: 24px;
+  overflow-y: scroll;
+
+  li {
+    margin-bottom: 24px;
+  }
 `
 export const NewNoteButton = styled.button`
   border: none;
