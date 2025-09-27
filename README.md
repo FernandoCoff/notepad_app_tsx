@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# Notepad App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o repositório para o frontend da aplicação **Notepad**, uma interface simples e moderna para criar, visualizar, editar e deletar notas. A aplicação foi desenvolvida com React, TypeScript e Styled Components.
 
-## Available Scripts
 
-In the project directory, you can run:
+## ▶️ Como Rodar a Aplicação
 
-### `npm start`
+Siga os passos abaixo para configurar e rodar o projeto em seu ambiente de desenvolvimento local.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Pré-requisitos
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Antes de começar, certifique-se de que você tem os seguintes softwares instalados na sua máquina:
+* [Node.js](https://nodejs.org/en/) (versão 18.x ou superior)
+* [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+* O **servidor backend** do Notepad deve estar em execução. Este projeto é apenas o frontend e precisa da API para funcionar.
 
-### `npm test`
+### Passo a Passo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/FernandoCoff/notepad_app_tsx.git](https://github.com/FernandoCoff/notepad_app_tsx.git)
+    ```
 
-### `npm run build`
+2.  **Navegue até o diretório do projeto:**
+    ```bash
+    cd notepad_app_tsx
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3.  **Instale as dependências:**
+    * Usando NPM:
+        ```bash
+        npm install
+        ```
+    * Ou usando Yarn:
+        ```bash
+        yarn install
+        ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4.  **Configuração da API (Opcional):**
+    Este projeto se conectará por padrão à API no endereço `http://localhost:3333`. Se a sua API estiver rodando em um endereço diferente, siga as instruções na seção **Variáveis de Ambiente**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5.  **Inicie o servidor de desenvolvimento:**
+    * Usando NPM:
+        ```bash
+        npm start
+        ```
+    * Ou usando Yarn:
+        ```bash
+        yarn start
+        ```
 
-### `npm run eject`
+6.  Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) (ou a porta que for indicada no seu terminal) para ver a aplicação.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Variáveis de Ambiente (.env)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A comunicação com o backend é configurada através de variáveis de ambiente.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Este passo é **opcional**. Se você não criar um arquivo `.env`, a aplicação usará o valor padrão `http://localhost:3333` para se conectar à API.
 
-## Learn More
+Para configurar um endereço de API diferente, crie um arquivo chamado `.env` na raiz do projeto com o seguinte conteúdo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+REACT_APP_API_URL=http://sua-api-aqui:3000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Substitua `http://sua-api-aqui:3000` pela URL base do seu servidor backend.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **[React](https://reactjs.org/)**: Biblioteca para construir a interface de usuário.
+* **[TypeScript](https://www.typescriptlang.org/)**: Superset do JavaScript que adiciona tipagem estática.
+* **[Styled Components](https://styled-components.com/)**: Para estilização CSS-in-JS.
+* **[Axios](https://axios-http.com/)**: Cliente HTTP para fazer requisições à API.
+* **[ESLint](https://eslint.org/)**: Para linting e padronização de código.
+
+---
+
+## 📜 Scripts Disponíveis
+
+No diretório do projeto, você pode rodar:
+
+* `npm start`: Inicia a aplicação em modo de desenvolvimento.
+* `npm run build`: Compila a aplicação para produção na pasta `build`.
+* `npm test`: Executa os testes em modo interativo.
